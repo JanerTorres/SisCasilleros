@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Casilleros</title>
+
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<h2>Agregar casillero</h2>
+		<form action="#" th:action="@{/save}" class="form-group" th:object=${casillero} method="post">
+			<div class="form-group">
+				<label for="id">Id</label>
+				<input type="text" class="form-control" id="id" th:field="*{id}" name="id">
+			</div>
+			<div class="form-group">
+				<label for="bloque">Bloque</label>
+				<input type="text" class="form-control" id="bloque" th:field="*{bloque}" name="bloque">
+			</div>
+			<div class="form-group">
+				<label for="piso">Piso</label>
+				<input type="text" class="form-control" id="piso" th:field="*{piso}" name="piso">
+			</div>
+			<div class="form-group">
+				<label for="enPrestamo">enPrestamo</label>
+				<input type="text" class="form-control" id="enPrestamo" th:field="*{enPrestamo}" name="enPrestamo">
+			</div>
+			
+			<button type="submit" class="btn btn-success">Guardar</button>
+		</form>
+	</div>
+</body>
+</html>
